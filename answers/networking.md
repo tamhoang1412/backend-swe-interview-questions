@@ -57,3 +57,133 @@ To be defined
 ## How long you can keep a TCP connection alive?
 
 To be defined
+
+## What are the differences between TCP and UDP? And in which case we use which?
+
+The key difference between TCP and UDP is TCP has a mechanism to resend loss packets, but UDP doesn't. So TCP suits in the case where packet loss can not be acceptable, like transfer file, request... UDP suits in the case packet loss can be tolerated, like in real-time voice/video calls.
+
+## How Ping command works? What is TTL? How does TTL will be changed?
+
+Ping command sends a packet to the destination server, waits for the response then calculates round trip time.
+Time-to-live is a mechanism that prevents a packet to be forward around the internet forever. Like the name, it is the number of times or hops, that packet can be forward before it is discarded by a router. Each time a router receives a packet, it reduces TTL of that packet by 1. If TTL reaches zero, the router will discard this packet then send an ICMP message back to the sender. The recommended default value of TTL is 64.
+
+## How HTTP works?
+
+HTTP is an application protocol that transfers hypertext messages between client and server. It uses specific request methods to perform specific tasks. They include:
+
+- POST: create a new entity
+- PUT: update an entity entirely
+- PATCH: update an entity partially
+- GET: get value
+- HEAD: get value without data
+- OPTION: get all the methods that the server supports for this resource
+- ...
+
+## Why did people say that HTTP is stateless? The reason they make it stateless?
+
+People say HTTP is stateless because each request is executed independently. Stateless provides high scalability.
+
+## Can we make a persistent HTTP connection? pros and cons of this way?
+
+Yes.
+HTTP persistent connection keeps one connection to send many objects. It can help reduce CPU resources, travel time, network traffic... But resources will be occupied and not be available to others.
+
+## Why HTTP require cookie each time we send the request?
+
+No it doesn't required cookie.
+
+## Can someone use your cookie and log in your Facebook account? How to migrate this?
+
+If Facebook stores authentication straight info in cookies normally and does not do anything special, the answer is yes.
+We can mitigate it using HttpOnly flag.
+
+## What is HTTP session? How does authentication work in HTTP? What is JWT?
+
+Cause HTTP is stateless, HTTP session and cookie are two ways to connect some requests together.
+Session is created and stored at server side, usually just temporary. Session ID will be sent to client, client may submit it to server as a cookie, or url parameter, so server will know which session this request belongs to. Session ends when user logout, close web browser, or timeout. Session is more secure, compared to cookie.
+Cookie is stored at client browser. Cookie will expire at the set time.
+
+JWT is standard for creating data with opt-in signature and encryption, used for authentication.
+
+## Which type of "data" HTTP can help us to get or push? (binary file? image? text file? video file? music file?)
+
+HTTP can help us get or push all kinds of files like text, image, binary, video, music...
+
+## REST/RESTful?
+
+REST stands for representational state transfer. It's a set of constraints that describes how an API should work. It includes four main principles:
+
+- Client-Sever: There is always a client and a server. Client sends request to server and server reply with response.
+- Stateless: Server handles client request independently. Client's request must contain enough information that server requires.
+- Uniform interface: For example, a resource is identified in URI, HTTP response always comes with status and body.
+- Cacheability: Client can cache response.
+
+An API that follows REST constraints is called RESTful.
+
+
+## AJAX technique?
+
+AJAX uses XMLHttpRequest to communicate with server. The first "A" stands for asynchronous, which means using AJAX, we can communicate with server without reloading the page.
+
+## How HTTPS work?
+
+HTTPS uses SSL - Secure Socket Layer to protect the communication by encryption. Before exchanging data, an SSL connection must be established first, then data will be encrypted then transferred safely.
+
+## Learn about some useful headers
+
+To be defined.
+
+## When you type "google.com" into your browser, that will happen when you type enter till everything is displayed on your screen?
+
+The first thing that happens is DNS lookup. The browser will get the corresponding IP address with the domain name from its cache, from the computer cache, from the local host file. If there is no data in these places, then the browser will send a request to DNS server to obtain the IP address.
+
+The second thing is browser will detect if HTTPS is required or not in case we don't type the full url. Browser can get this information from its history data, from a preload list. Otherwise, it will send an HTTP request. (When server receives the request, server can do appropriate action to force user uses HTTPS if it wants.)
+
+The third thing is TCP connection establishment. The TCP connection can be established by a process called 3-way handshake. If HTTPS is used, after TCP connection is established, the SSL connection establishment process will start.
+
+Fourthly, after having the connection, client will send data to the server and server will send a response back to client through this connection.
+
+The next thing is browser will render the data from response based on the content type. If there is no content type, the broswer will read the body of response to know which kind of data it is. If the content type is html, broswer will parse it then get resources like images, js files, css files if necessary.
+
+## DNS lookup (in case you already access google.com before and also in case you do not know the IP of google.com)
+
+DNS information is cached in browser and operating system. If there is no corresponding data in both of these places, DNS request will be sent to the DNS resolver. The resolver will make necessary request to Top Level Domain server, to Domain Name server to get the IP address of the requested host, then return to user.
+
+## Which protocol DNS use and why?
+
+DNS primarily uses UDP as transport protocol because it's fast and DNS data usually is small and fits an UDP packet.
+TCP is used when the data is greater than 512 bytes, which can not be fit on a single UDP packet.
+
+## The other of place to look up DNS.
+
+To be defined.
+
+## TCP or UDP will be used in this case? why?
+
+To be defined.
+
+## How to know "google.com" require HTTP or HTTPS? how browser can know and redirect from HTTP to HTTPS?
+
+There are at least two ways that make the web we are accessing change from using HTTP to HTTPS. 
+The first way is the server will redirect to HTTPS when the HTTP request comes.
+The second way is using HSTS, HTTP strict transport security. When a browser sends the first HTTP request to server, server will add a header into the response indicates that the next request will require using HTTPS. Browser will automatically use HTTPS next time based on that information. In addition, browsers like Chrome have a HSTS preload list, they will automatically use HTTPS for all of the sites in that list.
+
+## After you get the `HTML content` for "google.com" how to get the `*.js` and `image` files?
+
+Chain requests.
+
+## When getting `*.js` or `image` files do why use another `TCP connection` or use the same one as in the get `HTML content`? How DNS lookup work in this case?
+
+To be defined.
+
+## After your browser display "google.com" fully, is there any connection open?
+
+It depends on if the connection is keep-alive or not.
+
+## Caching can apply to which steps? How caching applied?
+
+To be defined.
+
+## What is the connection pool? It's advantages and disadvantages? How to implement connection pool in your programing language?
+
+Connection pool is a cache of database connections so connection can be reused when future request comes. Opening a connection is costly, so after a connection is opened, it is placed into connection pool so it can be reused later.
