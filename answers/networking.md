@@ -2,7 +2,7 @@
 
 ## How TCP open a connection? What does it need to open a connection?
 
-TCP needs to open a connection to determine if the server is available to respond and know there is a way from it to the server before transferring data. To open a connection, firstly server must be bound and listen to a port, it is passive open. Then a process called 3-way handshake happens:
+TCP needs to open a connection to determine if the server is available to respond and know there is a way from it to the server before transferring data. To open a connection, firstly server must be bound and listen to a port, it is passive open. Then a process called 3 way handshake happens:
 
 - Client sent SYN packet to the server with sequence num A
 - Server sends SYN-ACK packet to the client with rand sequence num B and ack num A' > A (eg A+1)
@@ -15,6 +15,7 @@ TCP needs to open a connection to determine if the server is available to respon
 ## What is syn, ack mean?
 
 Syn means synchronizaton. SYN packet is sent when the sender tries to connect to the receiver.
+
 Ack means acknowledgment. ACK packet is sent by the receiver to the sender to help the sender know that the SYN packet that it sent before reached the destination successfully.
 
 ## Why they have to send 2 "random" sequence numbers? The purpose of this sequence number?
@@ -65,6 +66,7 @@ The key difference between TCP and UDP is TCP has a mechanism to resend loss pac
 ## How Ping command works? What is TTL? How does TTL will be changed?
 
 Ping command sends a packet to the destination server, waits for the response then calculates round trip time.
+
 Time-to-live is a mechanism that prevents a packet to be forward around the internet forever. Like the name, it is the number of times or hops, that packet can be forward before it is discarded by a router. Each time a router receives a packet, it reduces TTL of that packet by 1. If TTL reaches zero, the router will discard this packet then send an ICMP message back to the sender. The recommended default value of TTL is 64.
 
 ## How HTTP works?
@@ -100,7 +102,9 @@ We can mitigate it using HttpOnly flag.
 ## What is HTTP session? How does authentication work in HTTP? What is JWT?
 
 Cause HTTP is stateless, HTTP session and cookie are two ways to connect some requests together.
+
 Session is created and stored at server side, usually just temporary. Session ID will be sent to client, client may submit it to server as a cookie, or url parameter, so server will know which session this request belongs to. Session ends when user logout, close web browser, or timeout. Session is more secure, compared to cookie.
+
 Cookie is stored at client browser. Cookie will expire at the set time.
 
 JWT is standard for creating data with opt-in signature and encryption, used for authentication.
@@ -135,7 +139,7 @@ To be defined.
 
 ## When you type "google.com" into your browser, that will happen when you type enter till everything is displayed on your screen?
 
-The first thing that happens is DNS lookup. The browser will get the corresponding IP address with the domain name from its cache, from the computer cache, from the local host file. If there is no data in these places, then the browser will send a request to DNS server to obtain the IP address.
+The first thing that happens is DNS lookup. The browser will get the corresponding IP address with the domain name from its cache, from the computer cache, from the local host file. If there is no data in these places, then the browser will send a request to DNS server to obtain the IP address. ([More](https://serverfault.com/questions/208172/how-does-my-browser-know-where-to-get-data-from-a-server))
 
 The second thing is browser will detect if HTTPS is required or not in case we don't type the full url. Browser can get this information from its history data, from a preload list. Otherwise, it will send an HTTP request. (When server receives the request, server can do appropriate action to force user uses HTTPS if it wants.)
 
@@ -152,6 +156,7 @@ DNS information is cached in browser and operating system. If there is no corres
 ## Which protocol DNS use and why?
 
 DNS primarily uses UDP as transport protocol because it's fast and DNS data usually is small and fits an UDP packet.
+
 TCP is used when the data is greater than 512 bytes, which can not be fit on a single UDP packet.
 
 ## The other of place to look up DNS.
@@ -164,21 +169,23 @@ To be defined.
 
 ## How to know "google.com" require HTTP or HTTPS? how browser can know and redirect from HTTP to HTTPS?
 
-There are at least two ways that make the web we are accessing change from using HTTP to HTTPS. 
+There are at least two ways that make the web we are accessing change from using HTTP to HTTPS.
+
 The first way is the server will redirect to HTTPS when the HTTP request comes.
+
 The second way is using HSTS, HTTP strict transport security. When a browser sends the first HTTP request to server, server will add a header into the response indicates that the next request will require using HTTPS. Browser will automatically use HTTPS next time based on that information. In addition, browsers like Chrome have a HSTS preload list, they will automatically use HTTPS for all of the sites in that list.
 
-## After you get the `HTML content` for "google.com" how to get the `*.js` and `image` files?
+## After you get the HTML content for "google.com" how to get the *.js and image files?
 
 Chain requests.
 
-## When getting `*.js` or `image` files do why use another `TCP connection` or use the same one as in the get `HTML content`? How DNS lookup work in this case?
+## When getting *.js or image files do why use another TCP connection or use the same one as in the get HTML content? How DNS lookup work in this case?
 
 To be defined.
 
 ## After your browser display "google.com" fully, is there any connection open?
 
-It depends on if the connection is keep-alive or not.
+It depends on if the connection is keep alive or not.
 
 ## Caching can apply to which steps? How caching applied?
 
@@ -187,3 +194,96 @@ To be defined.
 ## What is the connection pool? It's advantages and disadvantages? How to implement connection pool in your programing language?
 
 Connection pool is a cache of database connections so connection can be reused when future request comes. Opening a connection is costly, so after a connection is opened, it is placed into connection pool so it can be reused later.
+
+## What is socket?
+
+Socket is an endpoint for a program to send and receive data across the network. Socket allows communication between processes on the same machine or different machines.
+
+## Why do we need socket? Why socket is a "file" in linux?
+
+Not only socket, everything is treated as files in Linux operating system. It provides a common and universal interface for things to communicate in this OS.
+
+## What is src port when you create a connection to a "server"?
+
+To be defined.
+
+## How one server can handle multiple connections to the same port?
+
+As below.
+
+## What is the maximum number of connections a server can handle? (if it has unlimited resource) (in case of the same client and in case of multiple clients)
+
+TCP has 4 fields to identify the uniqueness of a socket: source IP, source port, destination IP, destination port.
+Theoretically, if server listens on a port, a client can open a maximum of 2^16 connection. that's is the maximum number of ports a client can open. For multiple clients, the number can be multiplied by 2^32, it is the possible number of source IP addresses. So the maximum number of connections is 2^48.
+
+But in practice, the maximum number of connections depends on the kernel configuration. Because each socket needs a file descriptor, the number of sockets is limited by the maximum number of file descriptors that the machine allows. In addition, a file descriptor needs a certain amount of memory so it can also be limited by the number of available memory.
+
+## When you open multiple tabs on your chrome, how OS knows which packet (both sending and receiving) correspond to which tab? (how about in se you open many tabs to the same page "for eg: google.com")
+
+Because each connection has its own socket that is used to exchange data.
+
+## What are the maximum numbers of connection your machine can connect to "google.com" (if you have unlimited resource)
+
+It is the maximum number of ports my machine can open, which is 2^16.
+
+## Can two processes listen to the same port on your machine? Why? How?
+
+Yes, and it is useful for multicast purpose. Socket needs to be specified as a reused socket before binding to do so.
+
+## What is buffer? why we always need buffer when working with "file"?
+
+Buffer is a segment of memory that is reserved to store necessary data being processed. Buffer helps reduce the processing time.
+
+## What is unix socket? When to use it?
+
+Unix socket or IPC socket is a data communication endpoint that allows processes in a same machine to communicate with others.
+
+## What is TCP proxy? reverse proxy? and VPN?
+
+A TCP proxy server is a server that acts as an intermediary between and client and server. Its goal is to hide clients on the internet. The server only knows that request came from the proxy server and doesn't know about the actual clients.
+
+A reverse proxy, on the other hand, protect server from client. It hides server from client. from the client point of view, client sends data to the reverse proxy and receives data from it too.
+
+VPN allows devices on a public network to be connected as they are in a private network.
+
+## How your router at your home works?
+
+Router connects devices within a network by forwarding packets between them. Packets might be sent between devices, or from a device to the internet and vice versa. It maintains an ARP (address resolution protocol) table to know where to forward a packet to.
+
+## Inside LAN network, it uses IP or MAC address? Why?
+
+Inside a LAN network, it uses MAC address cause we don't need a layer 3 protocol to communicate between devices that are in the same local network.
+
+## How does it know which packet comes from (or arrive at) which machine?
+
+Router will use the ARP table to know the MAC address of the device which this packet is sent to.
+
+## What is the difference between Hub and Switch inside LAN?
+
+Hub is operated on Physical layer and supports only broadcast transmission.
+
+Switch is operated on Data link layer and supports unicast, multicast, and broadcast transmission.s
+
+## How src IP/PORT and dst IP/PORT change on the way to the server?
+
+To be defined.
+
+## How load balancer works?
+
+Load-balancer distributes load to servers. It can do it randomly, uses an algorithm like round-robin, or distribute requests based on the current load of each server.
+
+## When we send a packet to a load balancer how does it forward to the desired server? (Does it keep any data on its memory?)
+
+As above (No).
+
+## When the server wants to send data back to the client, does the connection need to go through the load balancer?
+
+It depends on whether the server and the load balancer are in the same private network and share the same IP address.
+
+## What is different between reverse proxy and load balancer?
+
+Reserve proxy acts as an intermediary without any load distributing operation.
+
+## Can load balancer be a bottleneck? (Because it is the end point of too many requests) (bottleneck about RAM or CPU or Network?)
+
+Yes. And it also can be a single point of failure.
