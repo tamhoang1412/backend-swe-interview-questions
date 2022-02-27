@@ -80,7 +80,7 @@ The answers to those questions bases on my humble knowledge. If you find some th
         + [When the server wants to send data back to the client, does the connection need to go through the load-balancer?](/answers/networking.md#When-the-server-wants-to-send-data-back-to-the-client,-does-the-connection-need-to-go-through-the-load-balancer?)
         + [What is different between reverse proxy and load-balancer?](/answers/networking.md#What-is-different-between-reverse-proxy-and-load-balancer?)
         + [Can load-balancer be a bottleneck? (Because it is the end-point of too many requests) (bottleneck about RAM or CPU or Network?)](/answers/networking.md#Can-load-balancer-be-a-bottleneck?-(Because-it-is-the-end-point-of-too-many-requests)-(bottleneck-about-RAM-or-CPU-or-Network?))
-        + [Try to understand everything in [this page](https://softwareengineering.stackexchange.com/questions/312956/what-does-a-load-balancer-return) (all the answers)
+        + Try to understand everything in [this page](https://softwareengineering.stackexchange.com/questions/312956/what-does-a-load-balancer-return) (all the answers)
 
 ## OPERATING SYSTEM
 
@@ -102,8 +102,7 @@ The answers to those questions bases on my humble knowledge. If you find some th
         + [Can it read/write data on it's parent process?](/answers/os.md#Can-it-read/write-data-on-it's-parent-process?)
         + [What is copy on write (COW), Dirty COW? **(this concept is important to understand OS)**](/answers/os.md#What-is-copy-on-write-(COW),-Dirty-COW?-(this-concept-is-important-to-understand-OS))
         + [What will happen when child-process changes a variable of parent process?](/answers/os.md#What-will-happen-when-child-process-changes-a-variable-of-parent-process?)
-        + [If file descriptor also be inherited by the child process. What if 2 processes can handle a same file descriptor or even a same socket?](/answers/os.md#If-file-descriptor-also-be-inherited-by-the-child-process.-What-if-2-processes-can-handle-a-same-file-descriptor-or-even-a-same-socket?)
-)
+        + [If file descriptor also be inherited by the child process. What if 2 processes can handle a same file descriptor or even a same socket?](/answers/os.md#If-file-descriptor-also-be-inherited-by-the-child-process.-What-if-2-processes-can-handle-a-same-file-descriptor-or-even-a-same-socket?))
 
 2. [Concurrency vs Parallels? (in case single CPU core and multiple CPU cores)](/answers/os.md#Concurrency-vs-Parallels?-(in-case-single-CPU-core-and-multiple-CPU-cores))
     - [What is critical zone?](/answers/os.md#What-is-critical-zone?)
@@ -131,7 +130,7 @@ The answers to those questions bases on my humble knowledge. If you find some th
     - [Where global variable will be saved?](/answers/os.md#Where-global-variable-will-be-saved?)
 
 4. [Why in Linux everything is "file"?](/answers/os.md#Why-in-Linux-everything-is-"file"?)
-    - [How does mouse/keyboard/monitor... [communicate with your computer?](/answers/os.md#How-does-mouse/keyboard/monitor...-communicate-with-your-computer?)
+    - [How does mouse/keyboard/monitor... communicate with your computer?](/answers/os.md#How-does-mouse/keyboard/monitor...-communicate-with-your-computer?)
     - [What is file descriptor?](/answers/os.md#What-is-file-descriptor?)
     - [What is buffer? Why do we need buffer?](/answers/os.md#What-is-buffer?-Why-do-we-need-buffer?)
     - [What will happen if 2 processes read/write to the same file?](/answers/os.md#What-will-happen-if-2-processes-read/write-to-the-same-file?)

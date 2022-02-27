@@ -81,7 +81,7 @@ Child process cannot change variables of its parent.
 
 ## If file descriptor also be inherited by the child process. What if 2 processes can handle a same file descriptor or even a same socket?
 
-can refer [here](https://www.cs.ait.ac.th/~on/O/oreilly/perl/cookbook/ch17_10.htm)
+2 processes can handle the same file descriptor/socket. To prevent other processes does further things with the socket that the current process wants to close, we can use shutdown function instead of close function to stop other processes from using this socket.
 
 ## Concurrency vs Parallels? (in case single CPU core and multiple CPU cores)
 
