@@ -151,3 +151,70 @@ The answers to those questions bases on my humble knowledge. If you find some th
     - Quicksort vs Merge sort. Which is faster? Why? How they use these 2 sorting algorithms in real life?
 
 - Good resources: [Overview of OS syntax, try do dive deeper to each concept](https://medium.com/cracking-the-data-science-interview/the-10-operating-system-concepts-software-developers-need-to-remember-480d0734d710)
+
+## DATABASE
+
+1. Compare Relational DB (SQL) vs NoSQL. It's also really nice to know about newSQL (a kind of auto sharding DB which support SQL stuff but scale like NoSQL)
+    - How these 2 things can scale up?
+    - 3 normal forms in DBMS
+    - ACID of SQL and BASE of NoSQL? Why NoSQL is eventual consistency?
+    - CAP theorem in this case. [This is a so nice graph](http://blog.nahurst.com/visual-guide-to-nosql-systems)
+
+2. What is parameterized statement (in Java it's prepared statement)? How does it work **internally**?
+    - What is SQL injection? how to avoid it?
+    - How many "requests" you have to send to Database in a single prepared statement query? // one for compile and one for execute
+    - Can you reuse the compiled query multiple times? (does it help to speed up your application?)
+
+3. How indexing works internally?
+    - What algorithm and data structure indexing used? And why?
+    - How composite indexing works?
+    - How to know your query is using index?
+    - How index work in this case: `WHERE age = 5` and `Where age > 5`? The complexity to go to the next record?
+    - Indexing with char?
+
+4. The complexity of SQL query? How to measure it? How SQL optimize a query?
+    - Compare `WHERE id = 'a' AND id = 'b' AND id = 'c'` vs `WHERE id in (a, b, c)`?
+    - Complexity of this query `SELECT * FROM abc ORDER BY name LIMIT 10 OFFSET 1000000` // SELECT 10 record from offset 10^6 after sort by name (which is a char)? How to optimize it?
+    - What is the complexity of COUNT(*) query?
+    - How to write query to avoid full table scan?
+    - Complexity of JOIN, INNER JOIN, OUTER JOIN?
+
+5. What is Database Replicating? When we need it?
+    - What is bin log? How Master DB sync with Slave DB?
+    - Can a Slave DB be a slave of another Slave DB (we do not need to sync from Master DB directly)?
+
+6. What is Database Sharding? When we need it?
+    - Which rule we can apply to DB Sharding?
+    - How to ensure primary key is globally unique when sharding?
+    - How we can shard a table to multiple tables (same server) and multiple DB (multiple servers)?
+    - How query can work when we sharding? for example query but the data is in different tables/dbs?
+
+7. What is database transaction?
+    - How rollback works internally?
+    - What is dirty read, dirty write, read skew, phantom read, write skew, lost update?
+    - How transaction work when there are many concurrent requests?
+    - How to avoid race condition in DB? Read/Write lock?
+    - Distributed transaction? How to make a transaction when a query needs to access multiple DB?
+    - What is Try-Confirm Cancel?
+
+8. Compare:
+    - PostgreSQL vs MySQL
+
+## SECURITY
+
+1. Hash vs Encrypt vs Encode
+    - Are there any way we can crack Hash
+    - Symmetric vs asymmetric encryption? AES vs RSA?
+    - Fast Hash vs Slow Hash?
+    - When we use Encode??
+    - What is the perfect hash function?
+    - What is the load factor of hashing?
+
+2. SSL/TLS
+    - How to verify a certificate? How many kinds of certificates are there?
+    - What is CA? how to verify certificate of a CA?
+    - What is digital signature? What is HMAC?
+
+3. How to store credential information efficiency? (user password, config key, database credential, user information, secret key,.... )
+
+4. Describe a way to defense DDOS? (actually, there are many kinds of DDOS not just network or memory, so this question is pretty complicated)
