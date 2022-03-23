@@ -205,9 +205,3 @@ There will be a coordinator which orchestrates the whole transaction. When the t
 ## What is Try-Confirm Cancel?
 
 To be defined.
-
-## PostgreSQL vs MySQL
-
-- PostgreSQL is a object relational database management system. While MySQL is a relational database management system. The difference of an object relation DBMS compared to a relational DBMS is it supports some object-oriented features like table inheritance and function overloading.
-- PostgreSQL supports more built-in types like boolean, UUID which are not supported by MySQL
-- PostgreSQL supports both normal view and materialized view, while MySQL supports only normal view.

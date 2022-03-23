@@ -4,7 +4,7 @@ This repo contains technical questions (and answers) on several topics you might
 
 Most of the questions comes from [vietnakid](HTTPS://github.com/vietnakid/learning-material/blob/master/computer-science/cs_questions.md). I wrote down the brief answers and add some new questions/topics.
 
-The answers to those questions bases on my humble knowledge. If you find some things want to improve or fix, please fire a PR, I would be more than happy.
+The answers to those questions are based on my humble knowledge. If you find something that you want to improve or fix, please fire a PR, I would be more than happy.
 
 ## TOPICS
 
@@ -12,6 +12,8 @@ The answers to those questions bases on my humble knowledge. If you find some th
 - [OPERATING SYSTEM](#operating-system)
 - [DATABASE](#database)
 - [SECURITY](#security)
+- [PROGRAMMING PARADIGM](#programming-paradigm)
+- [SOFTWARE DEVELOPMENT PROCESS](#software-development-process)
 
 ## NETWORKING
 
@@ -154,6 +156,8 @@ The answers to those questions bases on my humble knowledge. If you find some th
 
 ## DATABASE
 
+[Answers here](/answers/database.md#topic-database)
+
 1. Compare Relational DB (SQL) vs NoSQL. It's also really nice to know about newSQL (a kind of auto sharding DB which support SQL stuff but scale like NoSQL)
     - How these 2 things can scale up?
     - 3 normal forms in DBMS
@@ -197,10 +201,9 @@ The answers to those questions bases on my humble knowledge. If you find some th
     - Distributed transaction? How to make a transaction when a query needs to access multiple DB?
     - What is Try-Confirm Cancel?
 
-8. Compare:
-    - PostgreSQL vs MySQL
-
 ## SECURITY
+
+[Answers here](/answers/security.md#topic-security)
 
 1. Hash vs Encrypt vs Encode
     - Are there any way we can crack Hash
@@ -218,3 +221,35 @@ The answers to those questions bases on my humble knowledge. If you find some th
 3. How to store credential information efficiency? (user password, config key, database credential, user information, secret key,.... )
 
 4. Describe a way to defense DDOS? (actually, there are many kinds of DDOS not just network or memory, so this question is pretty complicated)
+
+## PROGRAMMING PARADIGM
+
+[Answers here](/answers/programming-paradigm.md#topic-programming-paradigm)
+
+1. OOP. What is OOP? Why should we use OOP?
+    - What is the 4 principles of OOP?
+    - What is composition? Compare composition vs inheritance
+    - Interface vs abstract class
+    - Explain class constructor. Why does the constructor not return any value?
+    - What does private, protected, public means and what are the difference?
+
+2. Functional programming. What is FP? Why should we use FP?
+    - FP characteristics
+        - What is immutability and why is it important?
+        - What are pure functions and why are they important to functional programming?
+        - What does it mean when a function is a first-class citizen?
+    - Lazy evaluation
+    - What is higher-order functions?
+    - What are currying and partial application?
+    - What are pure and impure functions?
+    - Difference between flatMap() and map()
+    - Explain functor, applicative, monoid, monad
+
+## SOFTWARE DEVELOPMENT PROCESS
+
+[Answers here](/answers/software-development-process.md#topic-software-development-process)
+
+1. DDD. What is DDD?
+    - 2 base foundations of DDD
+
+2. TDD. What is TDD?
