@@ -17,7 +17,7 @@ The answers to those questions are based on my humble knowledge. If you find som
 
 ## NETWORKING
 
-[Answers here](/answers/networking.md#topic-networking)
+[Answers here](./answers/networking.md#topic-networking)
 
 1. Read the concept of TCP in [this wiki page](HTTPS://en.wikipedia.org/wiki/Transmission_Control_Protocol) and try to understand all the concepts of it (deeply):
     - How TCP open a connection? What does it need to open a connection?
@@ -88,7 +88,7 @@ The answers to those questions are based on my humble knowledge. If you find som
 
 ## OPERATING SYSTEM
 
-[Answers here](/answers/os.md#topic-operating-system)
+[Answers here](./answers/os.md#topic-operating-system)
 
 1. What is process, thread? What are the differences between them?
     - What data process, thread need to live? Why they said that Thread is a lightweight process?
@@ -156,7 +156,7 @@ The answers to those questions are based on my humble knowledge. If you find som
 
 ## DATABASE
 
-[Answers here](/answers/database.md#topic-database)
+[Answers here](./answers/database.md#topic-database)
 
 1. Compare Relational DB (SQL) vs NoSQL. It's also really nice to know about newSQL (a kind of auto sharding DB which support SQL stuff but scale like NoSQL)
     - How these 2 things can scale up?
@@ -203,7 +203,7 @@ The answers to those questions are based on my humble knowledge. If you find som
 
 ## SECURITY
 
-[Answers here](/answers/security.md#topic-security)
+[Answers here](./answers/security.md#topic-security)
 
 1. Hash vs Encrypt vs Encode
     - Are there any way we can crack Hash
@@ -224,7 +224,7 @@ The answers to those questions are based on my humble knowledge. If you find som
 
 ## PROGRAMMING PARADIGM
 
-[Answers here](/answers/programming-paradigm.md#topic-programming-paradigm)
+[Answers here](./answers/programming-paradigm.md#topic-programming-paradigm)
 
 1. OOP. What is OOP? Why should we use OOP?
     - What is the 4 principles of OOP?
@@ -247,7 +247,7 @@ The answers to those questions are based on my humble knowledge. If you find som
 
 ## SOFTWARE DEVELOPMENT PROCESS
 
-[Answers here](/answers/software-development-process.md#topic-software-development-process)
+[Answers here](./answers/software-development-process.md#topic-software-development-process)
 
 1. DDD. What is DDD?
     - 2 base foundations of DDD
