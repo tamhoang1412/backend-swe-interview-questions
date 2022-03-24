@@ -66,7 +66,7 @@ Yes, we can reuse the compiled query multiple times with different bound values.
 
 ## How indexing works internally?
 
-To be defined.
+Indexing adds a data structure with columns for the search conditions and a pointer. The pointer is the address on the memory disk of the row with the rest of the information. The query looks for the specific row in the index; the index refers to the pointer which will find the rest of the information.
 
 ## What algorithm and data structure indexing used? And why?
 
@@ -88,7 +88,7 @@ It depends on the index type is hashing or B-Tree. If the index type is B-Tree, 
 
 ## Indexing with char?
 
-To be defined.
+For text fields, index on that column only is used when filter condition filters a prefix of this column.
 
 ## The complexity of SQL query? How to measure it? How SQL optimize a query?
 
