@@ -22,4 +22,14 @@ DDD stands for Domain-Driven Design. It is a design approach that models softwar
 
 ## TDD. What is TDD?
 
-To be defined.
+TDD (Test Driven Development) is a programming approach where we write the tests first before implementing for every small functionality of an application. The tests would fail since there was no code is written. Then you start writing the code to make tests pass.
+
+It provides some benefits during the development, like ensuring the application is written for testability and improving the test coverage. The tests themself can serve as living documentation on how the functionality is used.
+
+The steps to follow when using TDD:
+
+1. Write the test
+2. Make it fail
+3. Change the code to make it pass
+4. Refactoring and repeat
+
