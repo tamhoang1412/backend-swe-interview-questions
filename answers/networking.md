@@ -133,6 +133,17 @@ AJAX uses XMLHttpRequest to communicate with server. The first "A" stands for as
 
 HTTPS uses SSL - Secure Socket Layer to protect the communication by encryption. Before exchanging data, an SSL connection must be established first, then data will be encrypted then transferred safely.
 
+Here’s how it works in more detail:
+
+1. Your browser reaches out to the website server and requests a connection.
+2. The server sends you its public key. It keeps its private key a secret.
+3. Your browser generates a third key called a *session key*.
+4. The session key is encrypted by your computer using the public key you got from the server
+5. The encrypted session key is then shared with the server.
+6. The server decrypts the session key that it received from you using the secret private key. Now both ends have the session key that your computer generated.
+7. The public key encryption is terminated and replaced with symmetric encryption.
+8. Now you are in a session with the server using only symmetric encryption, and that’s how it remains until you leave the website.
+
 ## Learn about some useful headers
 
 To be defined.
