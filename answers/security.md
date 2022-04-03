@@ -50,12 +50,12 @@ SSL - Secure Socket Layer, is the original encryption protocol developed for HTT
  8. Server is ready: The server sends a "finished" message encrypted with a session key.
  9. Secure symmetric encryption achieved: The handshake is completed, and communication continues using the session keys.
 
- TLS handshake can also use Diffie-Hellman as the key exchange algorithm. The steps then will be:
+ TLS handshake can also use Diffie-Hellman (DH) as the key exchange algorithm. The steps then will be:
 
  1. Client's hello is the same as above.
- 2. Server's hello also sends the server's random, chosen cipher suite, SSL certificate. The server also includes a digital signature, created by encrypting the client random, the server random, and its (Diffie-Hellman) DH parameter using the private key
+ 2. Server's hello also sends the server's random, chosen cipher suite, SSL certificate. The server also includes a digital signature, created by encrypting the client random, the server random, and its DH parameter using the private key.
  3. The client decrypts the server's digital signature using the SSL certificate's public key, verifying that the server controls the private key and is who it says it is. The client then sends its DH parameter to the server.
- 4. The client and server use the exchanged DH parameters to calculate a matching premaster secret separately.
+ 4. The client and server use the exchanged DH parameters to calculate a matching premaster secret independently.
  5. Session keys created: Now both the client and server calculate the session key using the client random, the server random, and the premaster secret like in an RSA handshake.
 
  The rest is the same as the RSA handshake.
