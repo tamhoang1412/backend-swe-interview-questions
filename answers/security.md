@@ -41,7 +41,7 @@ SSL - Secure Socket Layer, is the original encryption protocol developed for HTT
  The steps of a TLS handshake will vary depending on the key exchange algorithm in use. The RSA key exchange algorithm is used most often. The steps are as followed:
 
  1. The client kicks off the handshake by sending a "hello" message to the server. The message will include which TLS version, cipher suites the client supports, and a string of random bytes known as the "client random."
- 2. The server sends back a message containing the server's SSL certificate, the server's chosen cipher suite, and the "server random," another random string of bytes.
+ 2. The server sends back a message containing the server's SSL certificate, the server's chosen cipher suite, and the "server random" - another random string of bytes.
  3. Authentication: The client verifies the server's SSL certificate with the certificate authority that issued it.
  4. The client sends the "premaster secret", another random string of bytes. The premaster secret is encrypted with the public key from the SSL certificate and can only be decrypted with the private key by the server.
  5. The server decrypts the premaster secret.
