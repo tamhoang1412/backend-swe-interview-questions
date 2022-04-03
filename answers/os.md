@@ -10,9 +10,9 @@ Thread is a lightweight process because it does not cost much CPU to switch betw
 
 ## How CPU switch (context switch) between processes/threads? How data is to ensure safety? (in case single CPU core and multiple CPU cores)
 
-When process context switching happens, the state of the current process will be stored in Process Control Block, so this process can be resumed later. Data in memory of the current process will be switched into virtual memory, then this memory will get flushed to store data of the next process.
+When process context switching happens, the state of the current process will be stored in Process Control Block (PCB), so this process can be resumed later. It includes the value of the CPU registers, the process state, and memory-management information. Data pages in memory of the current process can be replaced or not, depending on the availability of memory, and the memory-management method of the operating system.
 
-When thread context switching happens, the state of the current thread will be stored in processor's cache and translational lookaside bsuffer, so the thread can be resumed later.  There is no memory switching involved.
+When thread context switching happens, the state of the current thread will be stored in Thread Control Block (TCB), so the thread can be resumed later. It includes the value of the CPU registers, the thread state, a program counter, a stack pointer, and a pointer to the PCB of the process to which the thread belongs. There is one major difference in thread context switching compared to processes: the address space remains the same (the is no page replacement).
 
 ## What is multi-process and multi-thread? When we should you which one?
 
