@@ -36,7 +36,29 @@ When a map initiates, two things need to be considered are the initial capacity 
 
 ## SSL/TLS
 
-To be defined.
+SSL - Secure Socket Layer, is the original encryption protocol developed for HTTP. It now has been replaced the TLS, Transport Layer Security, but the name SSL is still widely in use. Whenever a client makes a connection to a server over HTTPS, the client and server will initiate a TLS handshake, which happens after the TCP handshake has been finished.
+
+ The steps of a TLS handshake will vary depending on the key exchange algorithm in use. The RSA key exchange algorithm is used most often. The steps are as followed:
+
+ 1. The client kicks off the handshake by sending a "hello" message to the server. The message will include which TLS version, cipher suites the client supports, and a string of random bytes known as the "client random."
+ 2. The server sends back a message containing the server's SSL certificate, the server's chosen cipher suite, and the "server random" - another random string of bytes.
+ 3. Authentication: The client verifies the server's SSL certificate with the certificate authority that issued it.
+ 4. The client sends the "premaster secret", another random string of bytes. The premaster secret is encrypted with the public key from the SSL certificate and can only be decrypted with the private key by the server.
+ 5. The server decrypts the premaster secret.
+ 6. Session keys created: Both client and server generate session keys from the client random, the server random, and the premaster secret. They should arrive at the same results.
+ 7. Client is ready: The client sends a "finished" message that is encrypted with a session key.
+ 8. Server is ready: The server sends a "finished" message encrypted with a session key.
+ 9. Secure symmetric encryption achieved: The handshake is completed, and communication continues using the session keys.
+
+ TLS handshake can also use Diffie-Hellman (DH) as the key exchange algorithm. The steps then will be:
+
+ 1. Client's hello is the same as above.
+ 2. Server's hello also sends the server's random, chosen cipher suite, SSL certificate. The server also includes a digital signature, created by encrypting the client random, the server random, and its DH parameter using the private key.
+ 3. The client decrypts the server's digital signature using the SSL certificate's public key, verifying that the server controls the private key and is who it says it is. The client then sends its DH parameter to the server.
+ 4. The client and server use the exchanged DH parameters to calculate a matching premaster secret independently.
+ 5. Session keys created: Now both the client and server calculate the session key using the client random, the server random, and the premaster secret like in an RSA handshake.
+
+ The rest is the same as the RSA handshake.
 
 ## How to verify a certificate? How many kinds of certificates are there?
 
