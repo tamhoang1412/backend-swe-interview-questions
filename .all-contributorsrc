@@ -14,6 +14,15 @@
         "content",
         "ideas"
       ]
+    },
+    {
+      "login": "huytd",
+      "name": "Huy",
+      "avatar_url": "https://avatars.githubusercontent.com/u/613943?v=4",
+      "profile": "https://huy.rocks",
+      "contributions": [
+        "content"
+      ]
     }
   ],
   "contributorsPerLine": 7,
