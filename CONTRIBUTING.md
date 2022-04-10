@@ -10,9 +10,9 @@ This repository contains a collection of technical questions and answers on seve
 
 - **Answers**: There are many questions that have no answer yet, you can search the whole project `To be defined.`. If you have an answer to a question, please submit it as a pull request.
 
-<img width="578" alt="Screen Shot 2022-04-10 at 15 10 41" src="https://user-images.githubusercontent.com/8603085/162608993-1be7eb6f-7a45-4ebc-8c38-bf15ad9b05be.png">
+<img width="578" alt="An example of an unanswered question." src="https://user-images.githubusercontent.com/8603085/162615710-1f05ed93-add5-4b8b-a205-48f724782591.png">
 
-- **Questions**: If you have a question that you think should be included in the list, please add it to [README.md](./README.md). If you have an answer to that question, add it to [answers](./answers) folder as well. If you haven't had the answer yet, it's OK, just specify `To be defined.` to the corresponding answer file. We will seek for help for the answer from the community later.
+- **Questions**: If you have a question that you think should be included in the list, please add it to [README.md](./README.md) and [answers](./answers/). If you haven't had the answer yet, it's OK, just specify `To be defined.` to the corresponding answer file. We will seek for help for the answer from the community later.
 
 - **New topics**: If you think there is a new topic that should be added to the list, please create a new issue to discuss with the authors and maintainers of this project about if we should have that. Please submit at least 1 sample question as well.
 
@@ -27,3 +27,7 @@ npm run prettier:fix
 ```
 
 We also have a GitHub action to help if your file changes in the commits and pull requests are formatted correctly.
+
+# Closing
+
+We would love to have you in the list of contributors and thank you for your contribution. Happy coding!
