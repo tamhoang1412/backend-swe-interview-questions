@@ -28,7 +28,6 @@ Basically, a process has 5 states: new, ready, running, wait, and terminate. New
 
 There are many types of scheduling algorithms like first come first serve, shortest job first, shortest remaining time first, round-robin, etc.
 
-
 ## What will happen if a process is waiting? Or a thread is sleeping?
 
 When a thread is sleeping, other threads might be running.
@@ -113,6 +112,7 @@ Deadlock happens when all of these conditions happen:
 - Hold and wait: When processes need more than one resource and it already has some, it will hold them and wait for the rest.
 - No preemption: A process can not take away resource that is being held by other processes.
 - Circular wait.
+
 This can be avoided by making processes release their locked variable when they cannot get the other necessary resource, or granting some preemption permission for some processes.
 
 ## How does memory is managed in the OS?

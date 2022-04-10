@@ -114,7 +114,7 @@ O(N log N) with N being the total number of records.
 
 We can optimize the query by indexing the column name.
 
-## What is the complexity of COUNT(*) query?
+## What is the complexity of COUNT(\*) query?
 
 In MySQL, it depends on the storage engine that the table uses. For MyISAM, the total number of rows is stored with each table so the complexity is O(1), but for InnoDB, it is O(N).
 

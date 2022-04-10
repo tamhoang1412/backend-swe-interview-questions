@@ -124,7 +124,6 @@ REST stands for representational state transfer. It's a set of constraints that 
 
 An API that follows REST constraints is called RESTful.
 
-
 ## AJAX technique?
 
 AJAX uses XMLHttpRequest to communicate with server. The first "A" stands for asynchronous, which means using AJAX, we can communicate with server without reloading the page.
@@ -175,11 +174,11 @@ The first way is the server will redirect to HTTPS when the HTTP request comes.
 
 The second way is using HSTS, HTTP strict transport security. When a browser sends the first HTTP request to server, server will add a header into the response indicates that the next request will require using HTTPS. Browser will automatically use HTTPS next time based on that information. In addition, browsers like Chrome have a HSTS preload list, they will automatically use HTTPS for all of the sites in that list.
 
-## After you get the HTML content for "google.com" how to get the *.js and image files?
+## After you get the HTML content for "google.com" how to get the \*.js and image files?
 
 Chain requests.
 
-## When getting *.js or image files do why use another TCP connection or use the same one as in the get HTML content? How DNS lookup work in this case?
+## When getting \*.js or image files do why use another TCP connection or use the same one as in the get HTML content? How DNS lookup work in this case?
 
 To be defined.
 
