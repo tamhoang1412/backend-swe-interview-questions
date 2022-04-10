@@ -1,8 +1,10 @@
 # Backend SWE interview questions
 
+<!-- prettier-ignore-start -->
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
 [![All Contributors](https://img.shields.io/badge/all_contributors-4-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
+<!-- prettier-ignore-end -->
 
 This repo contains technical questions (and answers) on several topics you might want to prepare for an interview for BE position.
 
