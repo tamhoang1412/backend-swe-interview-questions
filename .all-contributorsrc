@@ -1,0 +1,25 @@
+{
+  "files": [
+    "README.md"
+  ],
+  "imageSize": 100,
+  "commit": false,
+  "contributors": [
+    {
+      "login": "tamhoang1412",
+      "name": "Tam Hoang",
+      "avatar_url": "https://avatars.githubusercontent.com/u/7721631?v=4",
+      "profile": "https://github.com/tamhoang1412",
+      "contributions": [
+        "content",
+        "ideas"
+      ]
+    }
+  ],
+  "contributorsPerLine": 7,
+  "projectName": "backend-swe-interview-questions",
+  "projectOwner": "tamhoang1412",
+  "repoType": "github",
+  "repoHost": "https://github.com",
+  "skipCi": true
+}
