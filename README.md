@@ -290,7 +290,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="https://github.com/tamhoang1412"><img src="https://avatars.githubusercontent.com/u/7721631?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Tam Hoang</b></sub></a><br /><a href="#content-tamhoang1412" title="Content">🖋</a> <a href="#ideas-tamhoang1412" title="Ideas, Planning, & Feedback">🤔</a></td>
     <td align="center"><a href="https://huy.rocks"><img src="https://avatars.githubusercontent.com/u/613943?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Huy</b></sub></a><br /><a href="#content-huytd" title="Content">🖋</a></td>
     <td align="center"><a href="https://github.com/TD2106"><img src="https://avatars.githubusercontent.com/u/20773434?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Duy Le</b></sub></a><br /><a href="#content-TD2106" title="Content">🖋</a></td>
-    <td align="center"><a href="https://hung.dev"><img src="https://avatars.githubusercontent.com/u/8603085?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Hung Viet Nguyen</b></sub></a><br /><a href="https://github.com/tamhoang1412/backend-swe-interview-questions/commits?author=nvh95" title="Code">💻</a></td>
+    <td align="center"><a href="https://hung.dev"><img src="https://avatars.githubusercontent.com/u/8603085?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Hung Viet Nguyen</b></sub></a><br /><a href="https://github.com/tamhoang1412/backend-swe-interview-questions/commits?author=nvh95" title="Code">💻</a> <a href="https://github.com/tamhoang1412/backend-swe-interview-questions/commits?author=nvh95" title="Documentation">📖</a></td>
   </tr>
 </table>
 
