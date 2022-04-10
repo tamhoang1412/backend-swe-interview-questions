@@ -32,4 +32,3 @@ The steps to follow when using TDD:
 2. Make it fail
 3. Change the code to make it pass
 4. Refactoring and repeat
-

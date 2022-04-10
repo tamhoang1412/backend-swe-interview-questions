@@ -1,0 +1,23 @@
+{
+  "name": "backend-swe-interview-questions",
+  "version": "0.0.1",
+  "description": "Backend SWE interview questions",
+  "homepage": "https://github.com/tamhoang1412/backend-swe-interview-questions#readme",
+  "bugs": {
+    "url": "https://github.com/tamhoang1412/backend-swe-interview-questions/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tamhoang1412/backend-swe-interview-questions.git"
+  },
+  "license": "MIT",
+  "author": "Tam Hoang",
+  "scripts": {
+    "prettier": "prettier '{,!(node_modules)/**/}*.md' --check",
+    "prettier:fix": "npm run prettier -- --write",
+    "sort": "npx sort-package-json"
+  },
+  "dependencies": {
+    "prettier": "^2.6.2"
+  }
+}
