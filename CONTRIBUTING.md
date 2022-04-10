@@ -28,6 +28,6 @@ npm run prettier:fix
 
 We also have a GitHub action to help if your file changes in the commits and pull requests are formatted correctly.
 
-# Closing
+## Closing
 
 We would love to have you in the list of contributors and thank you for your contribution. Happy coding!
