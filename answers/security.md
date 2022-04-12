@@ -36,7 +36,7 @@ When a map initiates, two things need to be considered are the initial capacity 
 
 ## SSL/TLS
 
-SSL - Secure Socket Layer, is the original encryption protocol developed for HTTP. It now has been replaced the TLS, Transport Layer Security, but the name SSL is still widely in use. Whenever a client makes a connection to a server over HTTPS, the client and server will initiate a TLS handshake, which happens after the TCP handshake has been finished.
+SSL - Secure Socket Layer, is the original encryption protocol developed for HTTP. It now has been replaced by the TLS, Transport Layer Security, but the name SSL is still widely in use. Whenever a client makes a connection to a server over HTTPS, the client and server will initiate a TLS handshake, which happens after the TCP handshake has been finished.
 
 The steps of a TLS handshake will vary depending on the key exchange algorithm in use. The RSA key exchange algorithm is used most often. The steps are as followed:
 
