@@ -14,7 +14,6 @@ The answers to those questions are based on my humble knowledge. If you find som
 
 ## TOPICS
 
-  - [TOPICS](#topics)
   - [NETWORKING](#networking)
   - [OPERATING SYSTEM](#operating-system)
   - [DATABASE](#database)
