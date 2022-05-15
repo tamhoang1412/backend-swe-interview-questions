@@ -14,12 +14,15 @@ The answers to those questions are based on my humble knowledge. If you find som
 
 ## TOPICS
 
-- [NETWORKING](#networking)
-- [OPERATING SYSTEM](#operating-system)
-- [DATABASE](#database)
-- [SECURITY](#security)
-- [PROGRAMMING PARADIGM](#programming-paradigm)
-- [SOFTWARE DEVELOPMENT PROCESS](#software-development-process)
+  - [TOPICS](#topics)
+  - [NETWORKING](#networking)
+  - [OPERATING SYSTEM](#operating-system)
+  - [DATABASE](#database)
+  - [SECURITY](#security)
+  - [PROGRAMMING PARADIGM](#programming-paradigm)
+  - [SOFTWARE DEVELOPMENT PROCESS](#software-development-process)
+  - [ARCHITECTURE](#architecture)
+  - [Contributors ✨](#contributors-)
 
 ## NETWORKING
 
@@ -277,6 +280,36 @@ The answers to those questions are based on my humble knowledge. If you find som
    - 2 base foundations of DDD
 
 2. TDD. What is TDD?
+
+## ARCHITECTURE
+
+[Answers here](/answers/architecture.md)
+
+1. From articles [24 microservices interview questions and answers to land that job](https://grokkingtechinterview.com/24-microservices-interview-questions-and-answers-to-land-that-job-4ae81ef34083)
+   1. What is the microservices architectural style?
+   2. What are some advantages of microservice architecture?
+   3. What are some disadvantages of microservices?
+   4. What is loose coupling and high cohesion?
+   5. What is the single responsibility principle?
+   6. What’s the relation between microservice architecture and DevOps?
+   7. What are the advantages of microservices over monolithic architecture?
+   8. What are the differences between microservice architecture and service-oriented architecture (SOA)?
+   9. What is a client certificate?
+   10. What is Kubernetes?
+   11. What is Eureka?
+   12. What is service discovery?
+   13. What is a distributed transaction?
+   14. What is domain-driven design?
+   15. What is end-to-end microservices testing?
+   16. What is a consumer-driven contract (CDC)?
+   17. What is idempotence in microservice architecture?
+   18. What communication styles are used in microservices architecture?
+   19. What is Docker?
+   20. What is Hystrix?
+   21. What are RESTful web services? (it may be duplicated with a question in [networking topic][#networking])
+   22. What is OAuth?
+   23. What is Spring Boot?
+   24. What are the benefits of using the Spring MVC framework?
 
 ## Contributors ✨
 
