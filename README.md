@@ -22,7 +22,6 @@ The answers to those questions are based on my humble knowledge. If you find som
   - [PROGRAMMING PARADIGM](#programming-paradigm)
   - [SOFTWARE DEVELOPMENT PROCESS](#software-development-process)
   - [ARCHITECTURE](#architecture)
-  - [Contributors ✨](#contributors-)
 
 ## NETWORKING
 
