@@ -277,6 +277,7 @@ The answers to those questions are based on my humble knowledge. If you find som
    - 2 base foundations of DDD
 
 2. TDD. What is TDD?
+3. What is BDD?
 
 ## Contributors ✨
 
