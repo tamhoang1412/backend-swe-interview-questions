@@ -35,23 +35,23 @@ The steps to follow when using TDD:
 
 ## What is BDD?
 
-BDD, Behaviour-Driven Development, is a *agile software development process* that encourages collaboration among developers, quality assurance testers, and customer representatives in a software project. BDD is considered an effective technical practice especially when the "problem space" of the business problem to solve is complex.
+BDD, Behaviour-Driven Development, is a _agile software development process_ that encourages collaboration among developers, quality assurance testers, and customer representatives in a software project. BDD is considered an effective technical practice especially when the "problem space" of the business problem to solve is complex.
 
 Each user story should, in some way, follow the following structure:
 
-  ```
-  Title
-    An explicit title.
-  Narrative
-    A short introductory section with the following structure:
-    As a: the person or role who will benefit from the feature;
-    I want: the feature;
-    so that: the benefit or value of the feature.
-  Acceptance criteria
-    A description of each specific scenario of the narrative with the following structure:
-    Given: the initial context at the beginning of the scenario, in one or more clauses;
-    When: the event that triggers the scenario;
-    Then: the expected outcome, in one or more clauses.
-  ```
+```
+Title
+  An explicit title.
+Narrative
+  A short introductory section with the following structure:
+  As a: the person or role who will benefit from the feature;
+  I want: the feature;
+  so that: the benefit or value of the feature.
+Acceptance criteria
+  A description of each specific scenario of the narrative with the following structure:
+  Given: the initial context at the beginning of the scenario, in one or more clauses;
+  When: the event that triggers the scenario;
+  Then: the expected outcome, in one or more clauses.
+```
 
 A highly recommended book to read: [BDD in Action: Behavior-driven development for the whole software lifecycle](https://www.amazon.com/BDD-Action-Behavior-driven-development-lifecycle/dp/161729165X) - written by John Smart Ferguson
