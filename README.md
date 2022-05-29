@@ -14,13 +14,13 @@ The answers to those questions are based on my humble knowledge. If you find som
 
 ## TOPICS
 
-  - [NETWORKING](#networking)
-  - [OPERATING SYSTEM](#operating-system)
-  - [DATABASE](#database)
-  - [SECURITY](#security)
-  - [PROGRAMMING PARADIGM](#programming-paradigm)
-  - [SOFTWARE DEVELOPMENT PROCESS](#software-development-process)
-  - [ARCHITECTURE](#architecture)
+- [NETWORKING](#networking)
+- [OPERATING SYSTEM](#operating-system)
+- [DATABASE](#database)
+- [SECURITY](#security)
+- [PROGRAMMING PARADIGM](#programming-paradigm)
+- [SOFTWARE DEVELOPMENT PROCESS](#software-development-process)
+- [ARCHITECTURE](#architecture)
 
 ## NETWORKING
 

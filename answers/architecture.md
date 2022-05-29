@@ -7,6 +7,7 @@ The microservices architectural style is commonly used to build enterprise appli
 ## What are some advantages of microservice architecture?
 
 Advantages of microservice architecture include:
+
 - Supports system scalability, testability, and maintainability
 - Developer teams can focus and specialize on specific microservices
 - Enables the setup of [continuous delivery pipelines](https://www.educative.io/blog/what-is-ci-cd-devops)
@@ -18,6 +19,7 @@ Advantages of microservice architecture include:
 ## What are some disadvantages of microservices?
 
 Disadvantages of microservice architecture include:
+
 - **New complexities**: While microservices help reduce complexity in the codebase, the communication and networking between components in the application becomes more complex (e.g. more difficult to track paths of communication because of interaction with all the separate components).
 - **Infrastructural overhead**: Many resources are needed to set up microservice architecture. While upfront costs may be high, long-term savings are a benefit.
 
@@ -36,6 +38,7 @@ DevOps is a methodology that combines practices from both software development a
 ## What are the advantages of microservices over monolithic architecture?
 
 Compared to monolithic architecture, the advantages of microservice architecture include:
+
 - **Easier to manage than one large complex codebase**: Breaking the entire application into individual microservice applications makes it easier to test, debug, and scale the entire system.
 - **Easier for teams to work on**: Development teams can focus on one application at a time, instead of one large complex codebase
 - **Better flexibility**: When traffic increases, only a small portion of the app needs to be scaled in times of increased traffic (eg. server).
@@ -47,12 +50,14 @@ Compared to monolithic architecture, the advantages of microservice architecture
 While microservice architectural style is a variation of SOA, there are various differences between SOA and microservices architecture.
 
 Microservices:
+
 - More scalable
 - No dependencies between business units
 - Prioritizes decoupling
 - Lightweight communication protocols such as HTTP and REST
-  
+
 SOA:
+
 - Less scalable
 - Dependencies between business units
 - Prioritizes reusability
@@ -110,7 +115,6 @@ Hystrix is a latency and fault tolerance library. Hystrix helps manage latency a
 
 Restful web services are web services that follow the [REST architectural style](https://www.educative.io/blog/what-are-rest-apis?eid=5082902844932096). RESTful web services communicate with each other using [CRUD operations](https://www.educative.io/blog/crud-operations?eid=5082902844932096). The REST architectural style emphasizes scalability and flexibility, which makes it compatible and frequently preferred for microservice architecture.
 
-
 [Read more](networking.md#restrestful)
 
 ## What is OAuth?
@@ -124,6 +128,7 @@ Spring Boot is a Java open-source tool that enables microservice application dev
 ## What are the benefits of using the Spring MVC framework?
 
 The Spring MVC framework has many useful benefits, including:
+
 - Data binding
 - Security and testing capabilities
 - Annotation system
