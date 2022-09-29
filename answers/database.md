@@ -70,11 +70,13 @@ Indexing adds a data structure with columns for the search conditions and a poin
 
 ## What algorithm and data structure indexing used? And why?
 
-Index can use a hash table or B-Tree.
+Index can use a hash table or B-Tree. (The index decided used depend on data type and how you query data)[https://dev.mysql.com/doc/refman/8.0/en/index-btree-hash.html].
 
 ## How composite indexing works?
 
 It's like a single index but the key is a compound key, which is the combined values of these columns that are indexed.
+
+Let’s say we have an index defined on 4 columns — col1, col2, col3, col4. With a composite index, we have search capability on col1, (col1, col2) , (col1, col2, col3) , (col1, col2, col3, col4). So we can use any left side prefix of the indexed columns, but we can’t omit a column from the middle & use that like — (col1, col3) or (col1, col2, col4) or col3 or col4 etc. These are invalid combinations.
 
 ## How to know your query is using index?
 
