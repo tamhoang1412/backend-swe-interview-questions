@@ -5,8 +5,8 @@
 TCP needs to open a connection to determine if the server is available to respond and know there is a way from it to the server before transferring data. To open a connection, firstly server must be bound and listen to a port, it is passive open. Then a process called 3 way handshake happens:
 
 - Client sent SYN packet to the server with sequence num A
-- Server sends SYN-ACK packet to the client with rand sequence num B and ack num A' > A (eg A+1)
-- Client sends ACK packet to the server, with ack num B' > B (eg B+1) and the sequence number is A' ( the ack num it received in step 2)
+- Server sends SYN-ACK packet to the client with rand sequence num B and ack num A' = A+1
+- Client sends ACK packet to the server, with ack num B' = B+1 and the sequence number is A' ( the ack num it received in step 2)
 
 ## Why there are 3 way handshakes but not 2 way?
 
