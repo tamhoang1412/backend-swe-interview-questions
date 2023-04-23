@@ -47,7 +47,7 @@ In the good condition, when there is no network partition, a system can guarante
 
 A parameterized statement is a statement that we can customize, like changing filter conditions.
 
-## What is SQL injection? how to avoid it?
+## What is SQL injection? How to avoid it?
 
 SQL injection is when the attacker sends a parameter that contains SQL queries and hopes this query will be executed in the system's database.
 SQL injection can be avoided by escaping special characters in the params that users submit to the system.
@@ -128,13 +128,13 @@ We need to write a query that takes advantage of index if any.
 
 To be defined.
 
-## What is Database Replicating? When we need it?
+## What is Database Replicating? When do we need it?
 
 Database replicating is the act of making one or many copies of a database to increase the availability of data.
 
 ## What is bin log? How Master DB sync with Slave DB?
 
-When data is written into DB, first it will be stored in Write Ahead Logs. Master DB send these log to Slave DB so Slave DB can also have those changes.
+When data is written into DB, first it will be stored in Write Ahead Logs (bin logs). Master DB send these log to Slave DB so Slave DB can also have those changes.
 
 ## Can a Slave DB be a slave of another Slave DB (we do not need to sync from Master DB directly)?
 
@@ -158,7 +158,7 @@ We can have a key generating system that generates keys for all servers. But thi
 
 To be defined.
 
-## How query can work when we sharding? for example query but the data is in different tables/dbs?
+## How query can work when we sharding (the data might be in the same or different tables/dbs)?
 
 For a query that we might know exactly where data is using its key, we can detect which shard is holding necessary data and query on this shard.
 

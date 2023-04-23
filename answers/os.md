@@ -1,10 +1,10 @@
 # Topic: OPERATING SYSTEM
 
-## What is process, thread? What are the differences between them?
+## What is `process`, `thread`? What are the differences between them?
 
 A process is like a program in execution. And a thread is a segment of a process. Each process has its own memory and is isolated. Meanwhile, threads of the same process can easily communicate with other threads, access common variables, memory.
 
-## What data process, thread need to live? Why they said that Thread is a lightweight process?
+## What data `process`, `thread` need to live? Why do they say that Thread is a lightweight process?
 
 Thread is a lightweight process because it does not cost much CPU to switch between threads as between processes.
 
@@ -14,7 +14,7 @@ When process context switching happens, the state of the current process will be
 
 When thread context switching happens, the state of the current thread will be stored in Thread Control Block (TCB), so the thread can be resumed later. It includes the value of the CPU registers, the thread state, a program counter, a stack pointer, and a pointer to the PCB of the process to which the thread belongs. There is one major difference in thread context switching compared to processes: the address space remains the same (the is no page replacement).
 
-## What is multi-process and multi-thread? When we should you which one?
+## What is multi-process and multi-thread? When should we use which?
 
 Multi-processing is when more than 2 processes are running simultaneously on a computer. This is probable in a multi-processor computer, where each processor handles a process.
 
@@ -145,7 +145,7 @@ Heap space is for dynamic memory allocation. Stack space is for static memory al
 
 The application will be loaded to RAM when we open an application.
 
-## What will happen you call another function (with parameters) or return from a function?
+## What will happen when you call another function (with parameters) or return from a function?
 
 When we call another function, local variables of the new function will be put to stack, and the stack register will be moved to the appropriate position. If the function takes parameters, it will create a duplicate version of those parameters (If the parameter is a pointer, it still creates a new pointer that points to the same address).
 
