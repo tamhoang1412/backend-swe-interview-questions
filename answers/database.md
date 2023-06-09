@@ -68,6 +68,12 @@ Yes, we can reuse the compiled query multiple times with different bound values.
 
 Indexing adds a data structure with columns for the search conditions and a pointer. The pointer is the address on the memory disk of the row with the rest of the information. The query looks for the specific row in the index; the index refers to the pointer which will find the rest of the information.
 
+## Indexes are good. Why don't we use as many indexes as possible?
+
+Write performace: Every time a row is added to or removed from a table, all indexes on that table must be modified. When a row is updated, any indexes on the column or columns that were affected need to be modified as well. Therefore, the more indexes you have, the more work the server needs to do to keep all schema objects up to date, which tends to slow things down.
+
+Storage space: Every index is a table, a special type of table but still a table. Therefore, indexes take up additional storage space on the database server.
+
 ## What algorithm and data structure indexing used? And why?
 
 Index can use a hash table or B-Tree. [The index is decided to use depending on the data type and how you query the data](https://dev.mysql.com/doc/refman/8.0/en/index-btree-hash.html).
@@ -126,7 +132,24 @@ We need to write a query that takes advantage of index if any.
 
 ## Complexity of JOIN, INNER JOIN, OUTER JOIN?
 
-To be defined.
+Depends on many factors such as join types, indexes tables size etc, the database can pick different strategies. Some common strageties are:
+
+- Nested loops join: It works by iterating over each row in the first table and comparing it with each row in the second table, based on the join condition. If the condition is satisfied, the joined row is added to the result.
+
+   Time complexity: O(N * M) 
+
+   Space complexity: O(1) 
+
+- Hash join: This join algorithm works by hashing the values of the join column of one table and storing them in a hash table. Then, it scans the other table and probes the hash table for matching values. 
+
+    Time complexity: O(N + M) 
+    
+    Space complexity: O(min(N, M)) 
+
+- Sort-Merge join: This join algorithm works by sorting both tables and then merging them together. The merge is performed by comparing the first row in each table and adding the row with the smaller value to the result. This process is repeated until all of the rows in both tables have been processed.
+    
+    In general case, time complexity is O(NlogN + MlogM)
+
 
 ## What is Database Replicating? When do we need it?
 
