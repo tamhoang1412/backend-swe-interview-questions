@@ -2,7 +2,7 @@
 
 <!-- prettier-ignore-start -->
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-5-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-6-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 <!-- prettier-ignore-end -->
 
@@ -289,16 +289,14 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 <table>
   <tbody>
     <tr>
-      <td align="center"><a href="https://github.com/tamhoang1412"><img src="https://avatars.githubusercontent.com/u/7721631?v=4?s=100" width="100px;" alt="Tam Hoang"/><br /><sub><b>Tam Hoang</b></sub></a><br /><a href="#content-tamhoang1412" title="Content">🖋</a> <a href="#ideas-tamhoang1412" title="Ideas, Planning, & Feedback">🤔</a></td>
-      <td align="center"><a href="https://huy.rocks"><img src="https://avatars.githubusercontent.com/u/613943?v=4?s=100" width="100px;" alt="Huy"/><br /><sub><b>Huy</b></sub></a><br /><a href="#content-huytd" title="Content">🖋</a></td>
-      <td align="center"><a href="https://github.com/TD2106"><img src="https://avatars.githubusercontent.com/u/20773434?v=4?s=100" width="100px;" alt="Duy Le"/><br /><sub><b>Duy Le</b></sub></a><br /><a href="#content-TD2106" title="Content">🖋</a></td>
-      <td align="center"><a href="https://hung.dev"><img src="https://avatars.githubusercontent.com/u/8603085?v=4?s=100" width="100px;" alt="Hung Viet Nguyen"/><br /><sub><b>Hung Viet Nguyen</b></sub></a><br /><a href="https://github.com/tamhoang1412/backend-swe-interview-questions/commits?author=nvh95" title="Code">💻</a> <a href="https://github.com/tamhoang1412/backend-swe-interview-questions/commits?author=nvh95" title="Documentation">📖</a></td>
-      <td align="center"><a href="https://app.codesignal.com/profile/haku"><img src="https://avatars.githubusercontent.com/u/22728098?v=4?s=100" width="100px;" alt="Pham Ngoc Quy"/><br /><sub><b>Pham Ngoc Quy</b></sub></a><br /><a href="#content-phamngocquy" title="Content">🖋</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/tamhoang1412"><img src="https://avatars.githubusercontent.com/u/7721631?v=4?s=100" width="100px;" alt="Tam Hoang"/><br /><sub><b>Tam Hoang</b></sub></a><br /><a href="#content-tamhoang1412" title="Content">🖋</a> <a href="#ideas-tamhoang1412" title="Ideas, Planning, & Feedback">🤔</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://huy.rocks"><img src="https://avatars.githubusercontent.com/u/613943?v=4?s=100" width="100px;" alt="Huy"/><br /><sub><b>Huy</b></sub></a><br /><a href="#content-huytd" title="Content">🖋</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/TD2106"><img src="https://avatars.githubusercontent.com/u/20773434?v=4?s=100" width="100px;" alt="Duy Le"/><br /><sub><b>Duy Le</b></sub></a><br /><a href="#content-TD2106" title="Content">🖋</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://hung.dev"><img src="https://avatars.githubusercontent.com/u/8603085?v=4?s=100" width="100px;" alt="Hung Viet Nguyen"/><br /><sub><b>Hung Viet Nguyen</b></sub></a><br /><a href="https://github.com/tamhoang1412/backend-swe-interview-questions/commits?author=nvh95" title="Code">💻</a> <a href="https://github.com/tamhoang1412/backend-swe-interview-questions/commits?author=nvh95" title="Documentation">📖</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://app.codesignal.com/profile/haku"><img src="https://avatars.githubusercontent.com/u/22728098?v=4?s=100" width="100px;" alt="Pham Ngoc Quy"/><br /><sub><b>Pham Ngoc Quy</b></sub></a><br /><a href="#content-phamngocquy" title="Content">🖋</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/ducminhgd"><img src="https://avatars.githubusercontent.com/u/4539428?v=4?s=100" width="100px;" alt="Giã Dương Đức Minh"/><br /><sub><b>Giã Dương Đức Minh</b></sub></a><br /><a href="#content-ducminhgd" title="Content">🖋</a></td>
     </tr>
   </tbody>
-  <tfoot>
-    
-  </tfoot>
 </table>
 
 <!-- markdownlint-restore -->
