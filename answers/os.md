@@ -84,7 +84,18 @@ Child process cannot change variables of its parent.
 
 ## Concurrency vs Parallels? (in case single CPU core and multiple CPU cores)
 
-To be defined.
+Concurrency: executing multiple tasks at the same time but not necessarily simultaneously.
+
+Parallelism: means that an application splits its tasks up into smaller subtasks which can be processed in parallel, for instance on multiple CPUs at the exact same time.
+
+Concurrency can happen on single CPU or multiple CPUs. But Parallelism requires hardware with multiple CPUs.
+
+A single CPU core can work on only one task at a time.
+
+Ex:
+- If multiple tasks are given to a single CPU, e.g., playing a song and writing code, it simply switches between these tasks. This switching is so fast and gives an illusion as if the tasks are running in parallel (although this is concurrent).
+- If two tasks are given to a hardware with multiple CPU cores, each CPU will process a task, and two tasks will be processed in parallel.
+
 
 ## What is critical zone?
 
