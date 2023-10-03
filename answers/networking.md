@@ -164,7 +164,9 @@ To be defined.
 
 ## TCP or UDP will be used in this case? why?
 
-To be defined.
+TCP: used in web browsing, email, file transfers,... because it is a reliable protocol (requires handshake), guarantee the data integrity. 
+
+UDP: used in game, video and music streaming,... because it is faster than TCP (no handshake, no error checking)
 
 ## How to know "google.com" require HTTP or HTTPS? how browser can know and redirect from HTTP to HTTPS?
 
