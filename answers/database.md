@@ -136,19 +136,20 @@ Depends on many factors such as join types, indexes tables size etc, the databas
 
 - Nested loops join: It works by iterating over each row in the first table and comparing it with each row in the second table, based on the join condition. If the condition is satisfied, the joined row is added to the result.
 
-   Time complexity: O(N * M) 
+    Time complexity: O(N * M)
 
-   Space complexity: O(1) 
+    Space complexity: O(1)
 
-- Hash join: This join algorithm works by hashing the values of the join column of one table and storing them in a hash table. Then, it scans the other table and probes the hash table for matching values. 
+- Hash join: This join algorithm works by hashing the values of the join column of one table and storing them in a hash table. Then, it scans the other table and probes the hash table for matching values.
 
-    Time complexity: O(N + M) 
-    
-    Space complexity: O(min(N, M)) 
+    Time complexity: O(N + M)
+
+    Space complexity: O(min(N, M))
 
 - Sort-Merge join: This join algorithm works by sorting both tables and then merging them together. The merge is performed by comparing the first row in each table and adding the row with the smaller value to the result. This process is repeated until all of the rows in both tables have been processed.
-    
-    In general case, time complexity is O(NlogN + MlogM)
+
+    Time complexity: O(NlogN + MlogM), becauce TC of sort step is O(NlogN + MlogM), and TC of the merge step is O(N + M).
+    Space complexity: depend on sort algorithm. For example, if the tables are fit in memory and database engine uses quicksort algorithm, the space complexity is O(logN + logM).
 
 
 ## What is Database Replicating? When do we need it?
